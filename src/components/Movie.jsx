@@ -56,14 +56,12 @@ const Movie = () => {
           ></i>{" "}
           Movie <small className="text-sm text-zinc-600">({category})</small>
         </h1>
-        <div className="flex items-center gap-3">
-          <Topnav />
-          <Dropdown
-            title="Category"
-            options={["popular", "top_rated", "upcoming", "nowplaying"]}
-            func={(e) => setCategory(e.target.value)}
-          />
-        </div>
+        <Topnav />
+        <Dropdown
+          title="Category"
+          options={["popular", "top_rated", "upcoming", "nowplaying"]}
+          func={(e) => setCategory(e.target.value)}
+        />
       </div>
       <InfiniteScroll
         dataLength={movie.length}

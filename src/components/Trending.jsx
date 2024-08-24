@@ -59,18 +59,20 @@ const Trending = () => {
           ></i>{" "}
           Trending
         </h1>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center">
           <Topnav />
-          <Dropdown
-            title="Category"
-            options={["movie", "tv", "all"]}
-            func={(e) => setCategory(e.target.value)}
-          />
-          <Dropdown
-            title="Duration"
-            options={["week", "day"]}
-            func={(e) => setDuration(e.target.value)}
-          />
+          <div className="flex gap-2">
+            <Dropdown
+              title="Category"
+              options={["movie", "tv", "all"]}
+              func={(e) => setCategory(e.target.value)}
+            />
+            <Dropdown
+              title="Duration"
+              options={["week", "day"]}
+              func={(e) => setDuration(e.target.value)}
+            />
+          </div>
         </div>
       </div>
       <InfiniteScroll
